@@ -1,0 +1,13 @@
+"VertexLitGeneric"
+{
+	"$baseTexture" "/creep_hull"
+		"$bumpmap" "/creep_hull_bump"
+
+	"$phong" "1"
+
+
+	"$phongboost" ".2"	
+	"$phongfresnelranges"	"[1 1 1]"
+	"$phongexponenttexture" "hoteliteactionxxx_clickhere"
+	"$phongalbedotint" "1"
+}

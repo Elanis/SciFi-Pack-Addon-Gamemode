@@ -1,0 +1,9 @@
+"VertexLitGeneric"
+{
+	"$baseTexture" "models\starcraft 2\protoss\buildings\metal"
+	"$surfaceprop" "metal"
+	"$envmap" "env_cubemap"
+	"$normalmapalphaenvmapmask" "1" 
+	"$bumpmap" "models\starcraft 2\protoss\buildings\metal_normal"
+	"$selfillum" "1"
+}

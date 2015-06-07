@@ -1,0 +1,14 @@
+"VertexLitGeneric"
+{
+	"$baseTexture" "/capital_ship_a"
+
+		"$bumpmap" "/capital_ship_a_bump"
+	"$phong" "1"
+
+
+	"$phongboost" ".2"	
+	"$phongfresnelranges"	"[1 1 1]"
+	"$phongexponenttexture" "hoteliteactionxxx_clickhere"
+	"$phongalbedotint" "1"
+
+}

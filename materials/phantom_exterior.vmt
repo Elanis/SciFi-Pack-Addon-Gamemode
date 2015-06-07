@@ -1,0 +1,16 @@
+"VertexLitGeneric"
+{
+	"$baseTexture" "/phantom_exterior"
+	"$bumpmap" "/phantom_exterior_bump"
+   "$envmap" "env_cubemap" 
+   "$envmaptint" "[0.15 0.15 0.15]" 
+
+	"$phong" "1"
+
+
+	"$phongboost" ".6"	
+	"$phongfresnelranges"	"[1 1 1]"
+	"$phongexponenttexture" "hoteliteactionxxx_clickhere"
+	"$phongalbedotint" "1"
+
+}

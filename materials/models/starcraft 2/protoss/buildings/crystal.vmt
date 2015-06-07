@@ -1,0 +1,8 @@
+"VertexLitGeneric"
+{
+	"$baseTexture" "models\starcraft 2\protoss\buildings\crystal"
+	"$surfaceprop" "metal"
+	"$envmapmask" "models\starcraft 2\protoss\buildings\crystal_spec"
+	"$translucent" "1"
+	"$selfillum" "1"
+}
