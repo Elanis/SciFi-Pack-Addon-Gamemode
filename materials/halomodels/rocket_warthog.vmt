@@ -1,0 +1,5 @@
+"VertexLitGeneric"
+{
+	"$baseTexture" "halomodels/rocket_warthog"
+	"$surfaceprop" "glass"
+}

@@ -1,0 +1,5 @@
+"VertexLitGeneric"
+{
+	"$baseTexture" "/seraph_phaser_ring"
+	"$selfillum" 1
+}

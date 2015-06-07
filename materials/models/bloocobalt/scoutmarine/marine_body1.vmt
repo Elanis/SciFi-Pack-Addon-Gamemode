@@ -1,0 +1,5 @@
+"VertexLitGeneric"
+{
+	"$baseTexture" "models\bloocobalt/scoutmarine/marine_body1"
+	"$bumpmap" "models\bloocobalt/scoutmarine/marine_body1n"
+}

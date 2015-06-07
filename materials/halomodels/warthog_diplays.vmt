@@ -1,0 +1,7 @@
+"VertexLitGeneric"
+{
+	"$model" "1"
+	"$baseTexture" "halomodels/warthog_diplays"
+	"$surfaceprop" "metal"
+	"$selfillum" 1		
+}

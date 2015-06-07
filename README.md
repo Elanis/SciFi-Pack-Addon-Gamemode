@@ -12,7 +12,9 @@ Infos in LICENSE file , Do not copy without author permission.
 #Credits
 - Kathar ( http://www.kathar.net/ ) for viper MK2 Model
 - thelaughingcheese ( ? ) for StarCraft Pylon Model
-- Foeaxe for BSG Shuttle Model
+- Foeaxe ( http://steamcommunity.com/id/foeaxe ) for BSG Shuttle Model
+- halo4life ( halo4life@halo2forvista.com ) for Halo Space Ship Models
+- phpmysql ( ? ) for some Halo vehicles
 - and many authors unknowns ...
 
 #Contact

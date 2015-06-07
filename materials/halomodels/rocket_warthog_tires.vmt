@@ -1,0 +1,6 @@
+"VertexLitGeneric"
+{
+	"$model" "1"
+	"$baseTexture" "halomodels/rocket_warthog_tires"
+	"$surfaceprop" "rubber"
+}

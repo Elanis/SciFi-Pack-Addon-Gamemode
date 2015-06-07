@@ -1,0 +1,12 @@
+"VertexLitGeneric"
+{
+	"$baseTexture" "models\H3_spartan/masterchief_base"
+	"$bumpmap" "models\H3_spartan/SpartanNormalST"
+	"$surfaceprop" "glass"
+	"$envmap" "env_cubemap"
+	"$envmapcontrast" 1
+	"$envmapsaturation" "[.7 .7 .7]"
+	"$envmaptint" 1
+	"$halflambert" 1
+	"$translucent" 1 
+}

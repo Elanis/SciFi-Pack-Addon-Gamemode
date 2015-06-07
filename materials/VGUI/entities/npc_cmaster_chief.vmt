@@ -1,0 +1,8 @@
+
+"UnlitGeneric"
+{
+"$basetexture" "vgui/entities/npc_cmaster_chief"
+"$vertexcolor" 1
+"$vertexalpha" 1
+"$nolod" 1
+}
