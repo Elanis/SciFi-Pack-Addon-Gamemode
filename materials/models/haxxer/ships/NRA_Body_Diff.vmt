@@ -1,0 +1,26 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models\haxxer\ships\NRA_Body_Diff"
+	"$bumpmap" "models\haxxer\ships\NR2_Body_Norm"
+
+	"$phong" 1
+	"$phongboost" 0.04
+	"$phongexponent" 30
+	"$phongtint" "[1 .85 .85]"
+	"$phongfresnelranges" "[.5 .85 30]"
+	"$model" 1	
+	"$phongwarptexture" "models/haxxer/ships/lightwarp"
+
+
+	"$rimlight" "1"
+	"$rimlightexponent" "300"
+	"$rimlightboost" "0.15"
+
+	$color2 "[1 1 1]"
+	$ambientocclusion 1
+	$detail "models\haxxer\ships\NRA_Body_Emiss"
+	$detailscale 1
+	$detailblendfactor "0.75"
+	$detailblendmode 5
+
+}

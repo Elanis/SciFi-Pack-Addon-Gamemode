@@ -1,0 +1,23 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models\haxxer\ships\NRA_Engines_DiffR"
+	"$bumpmap" "models\haxxer\ships\NR2_Engines_norm"
+
+
+
+	"$phong" 1
+	"$phongboost" 0.04
+	"$phongexponent" 30
+	"$phongtint" "[1 .85 .85]"
+	"$phongfresnelranges" "[.5 .85 30]"
+	"$model" 1	
+	"$phongwarptexture" "models/haxxer/ships/lightwarp"
+
+
+	"$rimlight" "1"
+	"$rimlightexponent" "300"
+	"$rimlightboost" "0.15"
+
+	$color2 "[1 1 1]"
+	$ambientocclusion 1
+}

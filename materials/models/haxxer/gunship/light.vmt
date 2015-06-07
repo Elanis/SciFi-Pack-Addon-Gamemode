@@ -1,0 +1,10 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models\haxxer\gunship\light"
+	
+	"$detail" "models\haxxer\gunship\light"
+	"$detailscale" "1"
+	"$detailblendfactor" "1.25"
+	"$detailblendmode" "5"
+
+}
