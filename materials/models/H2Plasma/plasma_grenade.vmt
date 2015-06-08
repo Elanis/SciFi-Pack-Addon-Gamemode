@@ -1,0 +1,5 @@
+"VertexLitGeneric"
+{
+	"$baseTexture" "models\H2Plasma/plasma_grenade"
+	"$selfillum" 1
+}

@@ -11,7 +11,7 @@ local soundx=Sound("ambient/atmosphere/undercity_loop1.wav")
 
 function ENT:SpawnFunction( ply, tr)
 	local SpawnPos = tr.HitPos + tr.HitNormal * 100
-	local ent = ents.Create( "pelican" ) --  name of the folder, the name of your flyable vehicle
+	local ent = ents.Create( "halo_pelican" ) --  name of the folder, the name of your flyable vehicle
 	ent:SetPos( SpawnPos )
 	ent:Spawn()
 	ent:Activate()
@@ -145,49 +145,45 @@ end
 
 function ENT:PhysicsSimulate( phys, deltatime )
 	if self.Inflight then
-		local hovering=false
-		if HOVERMODE and self.Pilot:KeyDown(IN_SPEED) then
-			hovering=true
-		end
-		self.Entity:SetNetworkedBool("hover",hovering)
 		local num=0
-		if self.Pilot:KeyDown(IN_ATTACK) then
-			--Attack MOUSE_1
-		elseif self.Pilot:KeyDown(IN_ATTACK2) then
-			--Attack MOUSE_2
-		elseif self.Pilot:KeyDown(IN_FORWARD) then
-			num=700
-		end
-		
-		if self.Pilot:KeyDown(IN_MOVELEFT) then
-			//self.Roll=self.Roll-3
-		elseif self.Pilot:KeyDown(IN_MOVERIGHT) then
-			//self.Roll=self.Roll+3
-		end
+		 if self.Pilot:KeyDown(IN_FORWARD) then
+               num=500
+           elseif self.Pilot:KeyDown(IN_BACK) then
+               num=-500
+          elseif self.Pilot:KeyDown(IN_SPEED) then
+                num=1000
+            end
 		
 		phys:Wake()
 			self.Accel=math.Approach(self.Accel,num,10)
-			if self.Accel>-200 and self.Accel < 200 and not self.Pilot:KeyDown(IN_FORWARD) and not hovering then return end
-		local pr={}
-			pr.secondstoarrive	= 1
-			pr.pos				= self.Entity:GetPos()+self.Entity:GetForward()*self.Accel
-			pr.maxangular		= 5000
-			pr.maxangulardamp	= 10000
-			pr.maxspeed			= 1000000
-			pr.maxspeeddamp		= 10000
-			pr.dampfactor		= 0.8
-			pr.teleportdistance	= 5000
-				local ang = self.Pilot:GetAimVector():Angle()
-				ang.r=ang.r+self.Roll
-			pr.angle			= ang
-			if self.Pilot:KeyDown(IN_SPEED) then
-				if HOVERMODE and num>0 then
-					pr.angle=self.Entity:GetAngles()
-				elseif not HOVERMODE then
-					pr.angle=self.Entity:GetAngles()
+		 if not self.Hover then
+             if self.Accel>-200 and self.Accel < 200 then return end --with out this you float
+         end
+		local move={}
+			move.secondstoarrive	= 1
+			move.pos = self.Entity:GetPos()+self.Entity:GetForward()*self.Accel
+				if self.Pilot:KeyDown( IN_DUCK ) then
+                   move.pos = move.pos+self.Entity:GetUp()*-200
+               elseif self.Pilot:KeyDown( IN_JUMP ) then
+                   move.pos = move.pos+self.Entity:GetUp()*300
 				end
-			end
-			pr.deltatime		= deltatime
-		phys:ComputeShadowControl(pr)
+
+                if self.Pilot:KeyDown( IN_MOVERIGHT ) then
+					move.pos = move.pos+self.Entity:GetRight()*200
+				elseif self.Pilot:KeyDown( IN_MOVELEFT ) then
+					move.pos = move.pos+self.Entity:GetRight()*-200
+				end
+			
+			
+			move.maxangular		= 5000
+			move.maxangulardamp	= 10000
+			move.maxspeed			= 1000000
+			move.maxspeeddamp		= 10000
+			move.dampfactor		= 0.8
+			move.teleportdistance	= 5000
+			local ang = self.Pilot:GetAimVector():Angle()
+			move.angle			= ang
+			move.deltatime		= deltatime
+		phys:ComputeShadowControl(move)
 	end
 end

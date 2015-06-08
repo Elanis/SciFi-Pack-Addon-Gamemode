@@ -2,12 +2,9 @@ AddCSLuaFile( "cl_init.lua" )
 AddCSLuaFile( "shared.lua" )
 include('shared.lua')
 
-local DESTROYABLE=true -- set to false to prevent damage
-local HEALTH=1000 -- change to set spawn health of shuttles
-
 function ENT:SpawnFunction( ply, tr)
 	local SpawnPos = tr.HitPos + tr.HitNormal * 100
-	local ent = ents.Create( "me_normandy" )
+	local ent = ents.Create( "banshee" )
 	ent:SetPos( SpawnPos )
 	ent:Spawn()
 	ent:Activate()
@@ -15,16 +12,25 @@ function ENT:SpawnFunction( ply, tr)
 end
 
 function ENT:Initialize()
-
-	self.Entity:SetNetworkedInt("health",HEALTH)
-
+	
+	self.Target = Vector(0,0,0);
+	self.DroneMaxSpeed = (8000);
+	self.AllowAutoTrack = (true);
+	self.AllowEyeTrack = (false);
+	self.TrackTime = 1000000;
+	self.Drones = {};
+	self.DroneCount = 0;
+	self.MaxDrones = (4);
+	self.Track = false;
+	self.Launched = false;
+	
 	self.reloadtime = (4);
 	self.Hover = true;
 	
 	self.Entity:SetUseType( SIMPLE_USE )
 	self.In=false
 	self.Pilot=nil
-	self.Entity:SetModel("models/haxxer/ships/me3NR/normandy_sr2_scale2.mdl")
+	self.Entity:SetModel("models/banshee.mdl")
 	self.Entity:PhysicsInit( SOLID_VPHYSICS )
 	self.Entity:SetMoveType( MOVETYPE_VPHYSICS )
 	self.Entity:SetSolid( SOLID_VPHYSICS )
@@ -39,32 +45,22 @@ function ENT:Initialize()
 	self.CanBomb = true
 	self.CanShoot = true
 
+
+	local trail_one = self.Entity:LookupAttachment( "trail" )
+	if (  trail_one == 0 ) then return end
+
+	local trail_two = self.Entity:LookupAttachment( "trail2" )
+	if ( trail_two == 0 ) then return end
+
+	local trail = util.SpriteTrail(self.Entity, trail_one, Color(255,255,255), false, 15, 5, 2, 1/(15+1)*0.5, "trails/smoke.vmt")  
+	local trail = util.SpriteTrail(self.Entity, trail_two, Color(255,255,255), false, 15, 5, 2, 1/(15+1)*0.5, "trails/smoke.vmt")  
+
+
 end
 
-function ENT:DoKill()
- 	local effectdata = EffectData() 
- 		effectdata:SetOrigin( self.Entity:GetPos() ) 
-  	util.Effect( "Explosion", effectdata, true, true ) 
-
-	if self.Inf then
-	self.Pilot:UnSpectate()
-	self.Pilot:DrawViewModel(true)
-	self.Pilot:DrawWorldModel(true)
-	self.Pilot:Spawn()
-	self.Pilot:SetNetworkedBool("isDriveShip",false)
-	self.Pilot:SetPos(self.Entity:GetPos()+Vector(0,0,100))
-	end
-end
-
-function ENT:OnTakeDamage(dmg)
-	if DESTROYABLE then
-		local health=self.Entity:GetNetworkedInt("health")
-		self.Entity:SetNetworkedInt("health",health-dmg:GetDamage())
-		local health=self.Entity:GetNetworkedInt("health")
-		if health<1 then
-			self.Entity:DoKill()
-			self.Entity:Remove()
-		end
+function ENT:OnTakeDamage( dmginfo )
+	 if self.Pilot != nil then
+		self.Pilot:TakeDamage(dmginfo:GetDamage()/3, dmginfo:GetAttacker())
 	end
 end
 
@@ -74,7 +70,7 @@ function ENT:OnRemove()
 	self.Pilot:DrawViewModel(true)
 	self.Pilot:DrawWorldModel(true)
 	self.Pilot:Spawn()
-	self.Pilot:SetNetworkedBool("isDriveShip",false)
+	self.Pilot:SetNetworkedBool("isDriveJumper",false)
 	self.Pilot:SetPos(self.Entity:GetPos()+Vector(0,0,100))
 	end
 end
@@ -85,15 +81,13 @@ function ENT:Think()
 	
 		if self.CanBomb == true then
 			if self.Pilot:KeyDown(IN_ATTACK2) then 
-				self:FireRight()
+				self:FireDrone()
 				self.CanBomb = false
 				timer.Simple(5,function() self.CanBomb=true end)  
 			end
 		end
 		if self.CanShoot == true then
 			if self.Pilot:KeyDown(IN_ATTACK) then 
-				--On MOUSE_1
-				--Bullet FIRE ( TEMPORARY )
 				bullet = {}
 				bullet.Num=1
 				bullet.Src=self.Entity:GetPos()+Vector( 0, 0, 150 )
@@ -122,7 +116,7 @@ function ENT:Think()
 			self.Pilot:DrawWorldModel(true)
 			self.Pilot:Spawn()
 			self.Entity:SetOwner(nil)
-			self.Pilot:SetNetworkedBool("isDriveShip",false)
+			self.Pilot:SetNetworkedBool("isDriveJumper",false)
 			--self.Pilot:SetPos(self.Entity:GetPos()+self.Entity:GetForward()*-200)
 			self.Pilot:SetPos(self.Entity:GetPos()+self.Entity:GetForward()*-150)
 
@@ -157,8 +151,8 @@ if !self.In then
 	self.In=true
 	ply:DrawViewModel(false)
 	ply:DrawWorldModel(false)
-	ply:SetNetworkedBool("isDriveShip",true)
-	ply:SetNetworkedEntity("Ship",self.Entity)
+	ply:SetNetworkedBool("isDriveJumper",true)
+	ply:SetNetworkedEntity("Jumper",self.Entity)
 	self.Pilot=ply	
 	end
 end
@@ -208,6 +202,17 @@ function ENT:PhysicsSimulate( phys, deltatime )
 	end
 end
 
-function ENT:FireRight()
---On MOUSE_2
+function ENT:FireDrone()
+	local pos = self.Entity:GetPos();
+	local vel = self.Entity:GetVelocity();
+	local up = self.Entity:GetUp();
+
+	local e = ents.Create("banshee_grenade");
+
+	e.Parent = self.Entity;
+	e:SetPos(pos);
+	e:SetOwner(self.Pilot);
+	e.Owner = self.Entity.Owner;
+	e:Spawn();
+	e:GetPhysicsObject():SetVelocity(self.Pilot:GetAimVector() * 99999999 + vel);
 end
