@@ -13,6 +13,7 @@ Infos in LICENSE file , Do not copy without author permission.
 - silverknight & hgn ( https://steamcommunity.com/id/hypergame ) for AT-ST model ( Star Wars )
 - Haxxer , Wasp, Kali & [RSS]M.Sgt. Mattias C. N.[U.S] for Normandy SR2 Model , GunShip and HoverCar
 - Catdeamon ( http://steamcommunity.com/id/Catdaemon ) & LightDemon ( http://steamcommunity.com/id/LightDemon ) & Votekick ( http://steamcommunity.com/id/votekick ) for Ship Piloting System
+- SnakeSVX ( https://github.com/SnakeSVx ) for many ship models
 - and many authors unknowns ...
 
 #Studios Credits

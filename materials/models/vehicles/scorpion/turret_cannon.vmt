@@ -1,0 +1,9 @@
+"VertexLitGeneric"
+{
+	"$baseTexture" "models/vehicles/scorpion/turret_cannon"
+	"$bumpmap"	"models/vehicles/scorpion/turret_cannon_bump"
+	"$envmap" "env_cubemap"
+	"$normalmapalphaenvmapmask" 1
+	"$envmapcontrast" 1
+	"$envmaptint" "[0.7 0.7 0.7]"
+}

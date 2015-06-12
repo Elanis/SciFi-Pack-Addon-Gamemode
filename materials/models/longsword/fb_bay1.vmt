@@ -1,0 +1,7 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models/longsword/fb_bay1"
+	"$selfillum" 1
+	"$envmap" "env_cubemap"
+	"$envmapmask" "models/longsword/fb_bay_ref"
+}

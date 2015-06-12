@@ -1,0 +1,5 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models/halo/halo outer ring"
+	"$bumpmap" "models/halo/halo outer ring normal"
+}

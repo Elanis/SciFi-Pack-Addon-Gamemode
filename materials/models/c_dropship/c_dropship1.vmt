@@ -1,0 +1,8 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models/c_dropship/c_dropship1"
+	"$selfillum" 1
+	"$bumpmap" "models/c_dropship/c_dropship_normal"
+	"$envmap" "env_cubemap"
+	"$normalmapalphaenvmapmask" 1
+}

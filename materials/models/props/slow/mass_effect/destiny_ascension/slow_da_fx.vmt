@@ -1,9 +1,0 @@
-"VertexlitGeneric"
-{
-	"$basetexture" "models/props/slow/mass_effect/destiny_ascension/slow_da_fx"
-	"$bumpmap" "models/props/slow/mass_effect/destiny_ascension/slow_da_bump"
-
-	"$selfillum" 1
-
-	"$additive" 1
-}

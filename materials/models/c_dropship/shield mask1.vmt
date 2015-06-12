@@ -1,0 +1,6 @@
+"UnlitGeneric"
+{
+	"$basetexture" "models/c_dropship/shield mask1"
+	"$translucent" 1
+	"$model" 1
+}
