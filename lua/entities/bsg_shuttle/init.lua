@@ -40,8 +40,6 @@ end
 
 function ENT:Think()
 
-	if(self.Pilot = nil and self.Piloting=true) then self.Piloting = false self.Entity:NextThink( CurTime() + 1 ) end
-
 	if self.Piloting and self.Pilot and self.Pilot:IsValid() then
 	
 		if self.Pilot:KeyDown(IN_ATTACK) then

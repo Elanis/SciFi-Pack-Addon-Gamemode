@@ -5,7 +5,7 @@ include('shared.lua')
 function ENT:SpawnFunction( ply,tr )
 
 	local ent = ents.Create("halo_banshee") --SpaceShip entity
-	ent:SetPos( tr.HitPos + Vector(0,0,10))
+	ent:SetPos( tr.HitPos + Vector(0,0,40))
 	ent:Spawn()
 	ent:Activate()
 	return ent
@@ -42,8 +42,6 @@ function ENT:Initialize()
 end
 
 function ENT:Think()
-
-	if(self.Pilot = nil and self.Piloting=true) then self.Piloting = false self.Entity:NextThink( CurTime() + 1 ) end
 
 	if self.Piloting and self.Pilot and self.Pilot:IsValid() then
 	

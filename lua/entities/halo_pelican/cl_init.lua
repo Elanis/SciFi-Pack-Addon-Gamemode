@@ -1,43 +1,46 @@
 include('shared.lua')
 
-local HoverTex=Material("effects/blueflare1")
+function ViewPoint( ply, origin, angles, fov )
 
-local EnterMessageAlpha=0
-LocalPlayerIsDrivingShuttle=false
+	local jump=LocalPlayer():GetNetworkedEntity("Ship",LocalPlayer())
+	local dist= -300
 
-function ShuttleLocalDrivingChanged(entity, name, oldval, newval)
-	if newval==true and LocalPlayerIsDrivingShuttle==false then
-		EnterMessageAlpha=4
-	end
-	LocalPlayerIsDrivingShuttle=newval
-end
-hook.Add("InitPostEntity","ShuttleInitAddProxy",function()
-	LocalPlayer():SetNetworkedVarProxy( "isDriveShuttle", ShuttleLocalDrivingChanged )
-end)
-
-function sCalc( ply, origin, angles, fov )
-	if not LocalPlayer().sDistz then
-		LocalPlayer().sDistz=100
-	end
-	if LocalPlayer().sDistz<1 then LocalPlayer().sDistz=1 end
-	if LocalPlayer().sDistz>1000 then LocalPlayer().sDistz=1000 end
-	local shut=LocalPlayer():GetNetworkedEntity("Shuttle",LocalPlayer())
-	if LocalPlayerIsDrivingShuttle and shut~=LocalPlayer() and shut:IsValid() then
+	if LocalPlayer():GetNetworkedBool("Driving",false) and jump~=LocalPlayer() and jump:IsValid() then
 		local view = {}
-			view.origin = shut:GetPos()+ply:GetAimVector():GetNormal()*-LocalPlayer().sDistz
+			view.origin = jump:GetPos()+Vector( 0, 0, 250 )+ply:GetAimVector():GetNormal()*dist
 			view.angles = angles
 		return view
 	end
 end
-hook.Add("CalcView", "MyCalcView", sCalc)
+hook.Add("CalcView", "ShipView", ViewPoint)
 
-function ENT:Think()	
-	if LocalPlayerIsDrivingShuttle then
-		if LocalPlayer():KeyDown(IN_JUMP) then
-			LocalPlayer().sDistz=LocalPlayer().sDistz+5
-		end
-		if LocalPlayer():KeyDown(IN_DUCK) then
-			LocalPlayer().sDistz=LocalPlayer().sDistz-5
-		end
-	end
+function CalcViewThing( pl, origin, angle, fov )
+
+	local ang = pl:GetAimVector();
+	
+	local pos = self.Entity:GetPos() + Vector( 0, 0, 64 ) - ( ang * 2000 );
+	local speed = self.Entity:GetVelocity():Length() - 500;
+
+	// the direction to face
+	local face = ( ( self.Entity:GetPos() + Vector( 0, 0, 40 ) ) - pos ):Angle();
+
+	// trace to keep it out of the walls
+	local trace = {
+		start = self.Entity:GetPos() + Vector( 0, 0, 64 ),
+		endpos = self.Entity:GetPos() + Vector( 0, 0, 64 ) + face:Forward() * ( 2000 * -1 );
+		mask = MASK_NPCWORLDSTATIC,
+
+	};
+	local tr = util.TraceLine( trace );
+
+	// setup view
+	local view = {
+		origin = tr.HitPos + tr.HitNormal,
+		angles = face,
+		fov = 90,
+
+	};
+
+	return view;
+
 end
