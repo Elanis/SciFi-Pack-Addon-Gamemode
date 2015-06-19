@@ -12,11 +12,13 @@ Infos in LICENSE file , Do not copy without author permission.
 - phpmysql ( ? ) for some Halo vehicles
 - silverknight & hgn ( https://steamcommunity.com/id/hypergame ) for AT-ST model ( Star Wars )
 - Haxxer , Wasp, Kali & [RSS]M.Sgt. Mattias C. N.[U.S] for Normandy SR2 Model , GunShip and HoverCar
-- Catdeamon ( http://steamcommunity.com/id/Catdaemon ) & LightDemon ( http://steamcommunity.com/id/LightDemon ) & Votekick ( http://steamcommunity.com/id/votekick ) for Ship Piloting System
+- Catdeamon ( http://steamcommunity.com/id/Catdaemon ) & LightDemon ( http://steamcommunity.com/id/LightDemon ) & Votekick ( http://steamcommunity.com/id/votekick ) for Helping to make ship piloting systems
 - SnakeSVX ( https://github.com/SnakeSVx ) for many ship models
+- Kilowing ( http://steamcommunity.com/id/Kilowing ) for making some of gamemode background
 - and many authors unknowns ...
 
 #Studios Credits
+- BabyLon 5 © Warner Bros. Entertainment Inc. - All rights reserved
 - Battlestar Galactica © Universal Network Television LLC. Licensed by NBC Universal Television Consumer Products Group 2010. All Rights Reserved.
 - Halo © Microsoft Studios. All Rights Reserved.
 - Mass Effect © EA International(Studio and Publishing) Ltd. All Rights Reserved.

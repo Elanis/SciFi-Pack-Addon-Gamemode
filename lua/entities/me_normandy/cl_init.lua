@@ -5,7 +5,7 @@ function ViewPoint( ply, origin, angles, fov )
 	local jump=LocalPlayer():GetNetworkedEntity("Ship",LocalPlayer())
 	local dist= -300
 
-	if LocalPlayer():GetNetworkedBool("isDriveShip",false) and jump~=LocalPlayer() and jump:IsValid() then
+	if LocalPlayer():GetNetworkedBool("Driving",false) and jump~=LocalPlayer() and jump:IsValid() then
 		local view = {}
 			view.origin = jump:GetPos()+Vector( 0, 0, 150 )+ply:GetAimVector():GetNormal()*dist
 			view.angles = angles
@@ -14,11 +14,9 @@ function ViewPoint( ply, origin, angles, fov )
 end
 hook.Add("CalcView", "ShipView", ViewPoint)
 
-
 function CalcViewThing( pl, origin, angle, fov )
 
 	local ang = pl:GetAimVector();
-	//local ang = aim:Angle():Right() * -1;
 	
 	local pos = self.Entity:GetPos() + Vector( 0, 0, 64 ) - ( ang * 2000 );
 	local speed = self.Entity:GetVelocity():Length() - 500;

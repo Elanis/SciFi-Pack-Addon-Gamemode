@@ -1,7 +1,7 @@
 ENT.Type = "anim"
 ENT.Base = "base_anim"
 ENT.PrintName	= "Normandy"
-ENT.Author	= "Catdeamon , Elanis"
+ENT.Author	= "Elanis"
 ENT.Contact	= ""
 ENT.Purpose	= ""
 ENT.Instructions= ""

@@ -1,7 +1,7 @@
 ENT.Type = "anim"
 ENT.Base = "base_anim"
 ENT.PrintName	= "Banshee"
-ENT.Author	= "LightDemon , Votekick , Elanis"
+ENT.Author	= "Elanis"
 ENT.Contact	= ""
 ENT.Purpose	= ""
 ENT.Instructions= ""
