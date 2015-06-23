@@ -3,15 +3,7 @@ Starcraft = {};
 Starcraft.Spawnlist = {};
 
 Starcraft.Spawnlist.Props = {
-"models/starcraft/marauder.mdl",
-"models/starcraft/marine.mdl",
-"models/starcraft/marine_dominion.mdl",
-"models/starcraft/marine_gold.mdl",
-"models/starcraft/marine_raynor.mdl",
-"models/starcraft/marine_tychus.mdl",
-"models/starcraft/siegetank.mdl",
-"models/starcraft/siegetank_siege.mdl",
-"models/starcraft/viking.mdl"
+"models/starcraft 2/protoss/buildings/pylon.mdl"
 }
 
 local function AddToTab(Categorised, pnlContent, tree, node)

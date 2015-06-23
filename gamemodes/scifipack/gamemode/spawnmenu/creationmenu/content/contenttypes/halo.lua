@@ -2,13 +2,7 @@ Halo = {};
 
 Halo.SpawnList = {};
 
-Halo.SpawnList.Props = {
-"models/haloreach/covieaagun.mdl",
-"models/player/masterchiefh2.mdl",
-"models/player/masterchiefh2_blue.mdl",
-"models/player/masterchiefh2_red.mdl",
-"models/player/masterchiefh3.mdl"
-}
+Halo.SpawnList.Props = {};
 
 local function AddToTab(Categorised, pnlContent, tree, node)
 	--

@@ -29,80 +29,51 @@ MsgN("Initializing SciFi-Pack Revision "..SFP.Revision);
 end
 MsgN("Searching Addons ...");
 
-for _,v in pairs(engine.GetAddons()) do
-	if (v.mounted and v.title=="SciFi-Pack Addon/Gamemode Lua Part") then
-		SFP.Workshop = 1 --So we're using workshop version		
-		MsgN("Workshop version initialized");
-	elseif (v.mounted and v.wsid=="459224094") then
-		SFP.Workshop = 1 --So we're using workshop version		
-		MsgN("Workshop version initialized");
-	else
-		SFP.Workshop = 0 --We're using github/SVN/Unzipped version
-		MsgN("Git/SVN/Zip version initialized");
-		break;
-	end
+for _, addon in SortedPairsByMemberValue( engine.GetAddons(), "title" ) do
 	
-	if(SFP.Workshop) then
+	if (addon.title=="SciFi-Pack Addon/Gamemode Lua Part") then SFP.Workshop = true end
 	
-		if (v.mounted and v.title=="SciFi-Pack Addon/Gamemode Mass Effect Part") then
-			SFP.WkME = 1
-			MsgN("Workshop Mass Effect Part Found !");
-		else
-			SFP.WkME = 0
-			MsgN("ERROR : No workshop Mass Effect found !");
-		end
-		
-		if (v.mounted and v.title=="SciFi-Pack Addon/Gamemode Star Wars Part") then
-			SFP.WkSW = 1
-			MsgN("Workshop Star Wars Part Found !");
-		else
-			SFP.WkME = 0
-			MsgN("ERROR : No workshop Star Wars found !");
-		end
-		
-		if (v.mounted and v.title=="SciFi-Pack Addon/Gamemode StarCraft Part") then
-			SFP.WkSW = 1
-			MsgN("Workshop StarCraft Part Found !");
-		else
-			SFP.WkME = 0
-			MsgN("ERROR : No workshop StarCraft found !");
-		end
+	if(addon.title=="SciFi-Pack Addon/Gamemode BSG Part") then SFP.BSG = true end
+			
+	if(addon.title=="SciFi-Pack Addon/Gamemode Halo Part") then SFP.Halo = true end
+			
+	if(addon.title=="SciFi-Pack Addon/Gamemode Mass Effect Part") then SFP.Me = true end
+			
+	if(addon.title=="SciFi-Pack Addon/Gamemode StarCraft Part") then SFP.SC = true end
+			
+	if(addon.title=="SciFi-Pack Addon/Gamemode Stargate Part") then SFP.SG = true end
+			
+	if(addon.title=="SciFi-Pack Addon/Gamemode Star Wars Part") then SFP.SW = true end
+			
+	if(addon.title=="SciFi-Pack Addon/Gamemode Other Part") then SFP.Other = true end
 	
-		if (v.mounted and v.title=="SciFi-Pack Addon/Gamemode Halo Part") then
-			SFP.WkH = 1
-			MsgN("Workshop Halo Part Found !");
-		else
-			SFP.WkH = 0
-			MsgN("ERROR : No workshop Halo found !");
-		end
-		
-		if (v.mounted and v.title=="SciFi-Pack Addon/Gamemode Stargate Part") then
-			SFP.WkSG = 1
-			MsgN("Workshop Stargate Part Found !");
-		else
-			SFP.WkSG = 0
-			MsgN("ERROR : No workshop Stargate found !");
-		end
-		
-		if (v.mounted and v.title=="SciFi-Pack Addon/Gamemode BSG Part") then
-			SFP.WkBSG = 1
-			MsgN("Workshop BSG Part Found !");
-		else
-			SFP.WkBSG = 0
-			MsgN("ERROR : No workshop BSG found !");
-		end
-		
-		if (v.mounted and v.title=="SciFi-Pack Addon/Gamemode Other Part") then
-			SFP.WkO = 1
-			MsgN("Workshop Other Part Found !");
-		else
-			SFP.WkO = 0
-			MsgN("ERROR : No workshop Other found !");
-		end
-		
 	end
 
-end --End of for 
+	if(SFP.Workshop) then 
+	
+		MsgN("Workshop Version Launch !")
+	
+		if(SFP.BSG) then MsgN("BSG part found !") else MsgN("BSG part NOT found") end
+	
+		if(SFP.Halo) then MsgN("Halo part found !") else MsgN("Halo part NOT found") end
+	
+		if(SFP.Me) then MsgN("Mass Effect part found !") else MsgN("Mass Effect part NOT found") end
+	
+		if(SFP.SC) then MsgN("StarCraft part found !") else MsgN("StarCraft part NOT found") end
+	
+		if(SFP.SG) then MsgN("Stargate part found !") else MsgN("Stargate part NOT found") end
+	
+		if(SFP.SW) then MsgN("Star Wars part found !") else MsgN("Star Wars part NOT found") end
+	
+		if(SFP.Other) then MsgN("Other part found !") else MsgN("Other part NOT found") end
+	
+	else
+	
+		MsgN("Git/SVN/Zip Version Found !")
+	
+	end
+	
+MsgN("=======================================================");
 
 end
 

@@ -40,10 +40,11 @@ gamemodes\scifipack\gamemode\spawnmenu\creationmenu\content\contentsidebar.lua
 gamemodes\scifipack\gamemode\spawnmenu\creationmenu\content\contentsidebartoolbox.lua
 gamemodes\scifipack\gamemode\spawnmenu\creationmenu\content\postprocessicon.lua
 gamemodes\scifipack\gamemode\spawnmenu\creationmenu\content\contenttypes\build.lua
-gamemodes\scifipack\gamemode\spawnmenu\creationmenu\content\contenttypes\spacebuild.lua
+gamemodes\scifipack\gamemode\spawnmenu\creationmenu\content\contenttypes\babylon.lua
 gamemodes\scifipack\gamemode\spawnmenu\creationmenu\content\contenttypes\bsg.lua
 gamemodes\scifipack\gamemode\spawnmenu\creationmenu\content\contenttypes\halo.lua
 gamemodes\scifipack\gamemode\spawnmenu\creationmenu\content\contenttypes\masseffect.lua
+gamemodes\scifipack\gamemode\spawnmenu\creationmenu\content\contenttypes\spacebuild.lua
 gamemodes\scifipack\gamemode\spawnmenu\creationmenu\content\contenttypes\starcraft.lua
 gamemodes\scifipack\gamemode\spawnmenu\creationmenu\content\contenttypes\stargate.lua
 gamemodes\scifipack\gamemode\spawnmenu\creationmenu\content\contenttypes\startrek.lua
