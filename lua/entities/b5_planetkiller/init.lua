@@ -18,6 +18,7 @@ function ENT:Initialize()
 	self.MaxHealth = 1000
 	self.Pilot = nil
 	self.Piloting = false
+	self.WeaponsTable = {}
 
 	self.Entity:SetNetworkedInt("health",self.MaxHealth)
 	
@@ -41,7 +42,7 @@ end
 
 function ENT:Think()
 
-	if self.Piloting and self.Pilot and self.Pilot:IsValid() then
+	if self.Piloting and self.Pilot and self.Pilot:IsValid() and IsValid(self.Pilot)then
 	
 		if self.Pilot:KeyDown(IN_ATTACK) then
 			self:PrimaryFire()
@@ -54,17 +55,22 @@ function ENT:Think()
 			self.Pilot:DrawViewModel(true)
 			self.Pilot:DrawWorldModel(true)
 			self.Pilot:Spawn()
+			self.Pilot:SetHealth(self.PlayerHealth);
 			self.Entity:SetOwner(nil)
 			self.Pilot:SetNetworkedBool("Driving",false)
 			self.Pilot:SetPos(self.Entity:GetPos()+self.Entity:GetRight()*150)
 
 			self.Speed = 0 -- Stop the motor
 			self.Entity:SetLocalVelocity(Vector(0,0,0)) -- Stop the ship
+			
+			for _,v in pairs(self.WeaponsTable) do
+			self.Pilot:Give(tostring(v));
+			end
+
+			table.Empty(self.WeaponsTable);
 		
 			self.Pilot=nil
 		end
-	
-		self.Pilot:SetPos(self.Entity:GetPos())
 		
 		self.Entity:NextThink(CurTime())
 	else
@@ -74,7 +80,6 @@ function ENT:Think()
 	return true
 
 end
-
 function ENT:OnTakeDamage(dmg)
 
 	local health = self.Entity:GetNetworkedInt("health")
@@ -135,7 +140,7 @@ end
 
 function ENT:PhysicsSimulate( phys, deltatime )
 
-	if self.Piloting then
+	if self.Piloting and IsValid( self.Pilot ) then
 	
 		local speedvalue=0
 		
@@ -175,6 +180,8 @@ function ENT:PhysicsSimulate( phys, deltatime )
 			move.angle			= ang
 			move.deltatime		= deltatime
 		phys:ComputeShadowControl(move)
+		
+		self.Pilot:SetPos(self.Entity:GetPos())
 	end
 end
 

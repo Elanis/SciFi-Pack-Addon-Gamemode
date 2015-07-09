@@ -17,6 +17,7 @@ function ENT:Initialize()
 	self.MaxHealth = 1500
 	self.Pilot = nil
 	self.Piloting = false
+	self.WeaponsTable = {}
 
 	self.Entity:SetNetworkedInt("health",self.MaxHealth)
 	
@@ -40,7 +41,7 @@ end
 
 function ENT:Think()
 
-	if self.Piloting and self.Pilot and self.Pilot:IsValid() then
+	if self.Piloting and self.Pilot and self.Pilot:IsValid() and IsValid(self.Pilot)then
 	
 		if self.Pilot:KeyDown(IN_ATTACK) then
 			self:PrimaryFire()
@@ -53,17 +54,22 @@ function ENT:Think()
 			self.Pilot:DrawViewModel(true)
 			self.Pilot:DrawWorldModel(true)
 			self.Pilot:Spawn()
+			self.Pilot:SetHealth(self.PlayerHealth);
 			self.Entity:SetOwner(nil)
 			self.Pilot:SetNetworkedBool("Driving",false)
 			self.Pilot:SetPos(self.Entity:GetPos()+self.Entity:GetRight()*150)
 
 			self.Speed = 0 -- Stop the motor
 			self.Entity:SetLocalVelocity(Vector(0,0,0)) -- Stop the ship
+			
+			for _,v in pairs(self.WeaponsTable) do
+			self.Pilot:Give(tostring(v));
+			end
+
+			table.Empty(self.WeaponsTable);
 		
 			self.Pilot=nil
 		end
-	
-		self.Pilot:SetPos(self.Entity:GetPos())
 		
 		self.Entity:NextThink(CurTime())
 	else
@@ -132,14 +138,14 @@ end
 
 function ENT:PhysicsSimulate( phys, deltatime )
 
-	if self.Piloting then
+	if self.Piloting and IsValid(self.Pilot) then
 	
 		local speedvalue=0
 		
 				if self.Pilot:KeyDown(IN_MOVELEFT) then
-					speedvalue=500
-				elseif self.Pilot:KeyDown(IN_MOVERIGHT) then
 					speedvalue=-500
+				elseif self.Pilot:KeyDown(IN_MOVERIGHT) then
+					speedvalue=500
 				end
 
 		 phys:Wake()
@@ -155,9 +161,9 @@ function ENT:PhysicsSimulate( phys, deltatime )
                 elseif self.Pilot:KeyDown( IN_JUMP ) then
                    move.pos = move.pos+self.Entity:GetUp()*300
                 elseif self.Pilot:KeyDown( IN_FORWARD ) then
-					move.pos = move.pos+self.Entity:GetRight()*1000
-				elseif self.Pilot:KeyDown( IN_BACK ) then
 					move.pos = move.pos+self.Entity:GetRight()*-1000
+				elseif self.Pilot:KeyDown( IN_BACK ) then
+					move.pos = move.pos+self.Entity:GetRight()*1000
 				end
 		
 			move.maxangular		= 5000
@@ -166,10 +172,12 @@ function ENT:PhysicsSimulate( phys, deltatime )
 			move.maxspeeddamp		= 10000
 			move.dampfactor		= 0.8
 			move.teleportdistance	= 5000
-			local ang = self.Pilot:GetAimVector():Angle() + Angle(0,90,0) + Angle(-self.Pilot:GetAimVector():Angle().p,0,self.Pilot:GetAimVector():Angle().p) --Fix models and Fix angle problems
+			local ang = self.Pilot:GetAimVector():Angle() + Angle(0,270,0) + Angle(-self.Pilot:GetAimVector():Angle().p,0,-self.Pilot:GetAimVector():Angle().p) --Fix models and Fix angle problems
 			move.angle			= ang
 			move.deltatime		= deltatime
 		phys:ComputeShadowControl(move)
+		
+		self.Pilot:SetPos(self.Entity:GetPos())
 	end
 end
 
