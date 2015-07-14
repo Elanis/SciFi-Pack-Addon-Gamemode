@@ -1,0 +1,4 @@
+"VertexlitGeneric"
+{
+"$basetexture" "models\KSP\JetTank" //Model's material path
+}

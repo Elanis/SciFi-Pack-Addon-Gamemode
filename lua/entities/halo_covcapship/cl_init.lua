@@ -7,7 +7,7 @@ function ViewPoint( ply, origin, angles, fov )
 
 	if LocalPlayer():GetNetworkedBool("Driving",false) and jump~=LocalPlayer() and jump:IsValid() then
 		local view = {}
-			view.origin = jump:GetPos()+Vector( 0, 0, 600 )+ply:GetAimVector():GetNormal()*dist +LocalPlayer():GetAimVector():GetNormal()*self.Dist
+			view.origin = jump:GetPos()+Vector( 0, 0, 600 )+ply:GetAimVector():GetNormal()*dist +LocalPlayer():GetAimVector():GetNormal()
 			view.angles = angles
 		return view
 	end

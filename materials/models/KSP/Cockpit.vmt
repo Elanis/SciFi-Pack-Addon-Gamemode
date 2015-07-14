@@ -1,0 +1,4 @@
+"VertexlitGeneric"
+{
+"$basetexture" "models\KSP\Cockpit" //Model's material path
+}

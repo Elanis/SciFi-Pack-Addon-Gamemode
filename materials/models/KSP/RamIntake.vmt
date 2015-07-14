@@ -1,0 +1,4 @@
+"VertexlitGeneric"
+{
+"$basetexture" "models\KSP\RamIntake" //Model's material path
+}

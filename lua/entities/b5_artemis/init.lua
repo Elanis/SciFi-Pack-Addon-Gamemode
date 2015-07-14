@@ -56,7 +56,7 @@ function ENT:Think()
 			self.Pilot:DrawViewModel(true)
 			self.Pilot:DrawWorldModel(true)
 			self.Pilot:Spawn()
-			self.Pilot:SetHealth(self.PlayerHealth);
+
 			self.Entity:SetOwner(nil)
 			self.Pilot:SetNetworkedBool("Driving",false)
 			self.Pilot:SetPos(self.Entity:GetPos()+self.Entity:GetRight()*150)

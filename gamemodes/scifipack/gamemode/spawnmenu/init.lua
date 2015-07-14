@@ -21,6 +21,7 @@ AddCSLuaFile( "scifipack/gamemode/spawnmenu/creationmenu/content/contentsidebar.
 AddCSLuaFile( "scifipack/gamemode/spawnmenu/creationmenu/content/contentsidebartoolbox.lua" )
 AddCSLuaFile( "scifipack/gamemode/spawnmenu/creationmenu/content/postprocessicon.lua" )
 AddCSLuaFile( "scifipack/gamemode/spawnmenu/creationmenu/content/contenttypes/build.lua" )
+AddCSLuaFile( "scifipack/gamemode/spawnmenu/creationmenu/content/contenttypes/ksp.lua" )
 AddCSLuaFile( "scifipack/gamemode/spawnmenu/creationmenu/content/contenttypes/spacebuild.lua" )
 AddCSLuaFile( "scifipack/gamemode/spawnmenu/creationmenu/content/contenttypes/stargate.lua" )
 AddCSLuaFile( "scifipack/gamemode/spawnmenu/creationmenu/content/contenttypes/startrek.lua" )

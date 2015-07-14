@@ -28,7 +28,7 @@ Infos in LICENSE file , Do not copy without author permission.
 - Star Wars  © Lucasfilm Ltd. All Rights Reserved
 
 #Contact
-You can contact me at elanis@hotmail.com ( Bugs , Add/Retire your Content , ... ) . You can also contact me on steam ( http://steamcommunity.com/id/29axel ).
+You can contact me at elanis@hotmail.com ( Bugs , Add/Retire your Content , ... ) . You can also contact me on steam ( http://steamcommunity.com/id/elanis ).
 
 #Warning
 This content was create for play and fun. There isn't commercial benefits. 

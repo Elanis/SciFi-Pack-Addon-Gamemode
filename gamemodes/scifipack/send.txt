@@ -43,6 +43,7 @@ gamemodes\scifipack\gamemode\spawnmenu\creationmenu\content\contenttypes\build.l
 gamemodes\scifipack\gamemode\spawnmenu\creationmenu\content\contenttypes\babylon.lua
 gamemodes\scifipack\gamemode\spawnmenu\creationmenu\content\contenttypes\bsg.lua
 gamemodes\scifipack\gamemode\spawnmenu\creationmenu\content\contenttypes\halo.lua
+gamemodes\scifipack\gamemode\spawnmenu\creationmenu\content\contenttypes\ksp.lua
 gamemodes\scifipack\gamemode\spawnmenu\creationmenu\content\contenttypes\masseffect.lua
 gamemodes\scifipack\gamemode\spawnmenu\creationmenu\content\contenttypes\spacebuild.lua
 gamemodes\scifipack\gamemode\spawnmenu\creationmenu\content\contenttypes\starcraft.lua
