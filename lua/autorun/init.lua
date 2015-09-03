@@ -67,6 +67,8 @@ for _, addon in SortedPairsByMemberValue( engine.GetAddons(), "title" ) do
 	
 	if(addon.title=="SciFi-Pack Addon/Gamemode Babylon 5 Part") then SFP.Bab = true else SFP.Bab = false end
 	
+	if(addon.title=="SciFi-Pack Addon/Gamemode Code Lyoko Part") then SFP.CL = true else SFP.CL= false end
+	
 	if(addon.title=="SciFi-Pack Addon/Gamemode KSP Part") then SFP.KSP = true else SFP.KSP = false end
 			
 	if(addon.title=="SciFi-Pack Addon/Gamemode Halo Part") then SFP.Halo = true else SFP.Halo = false end
@@ -90,6 +92,8 @@ for _, addon in SortedPairsByMemberValue( engine.GetAddons(), "title" ) do
 		if(SFP.BSG) then MsgN("BSG part found !") else MsgN("BSG part NOT found") end
 		
 		if(SFP.Bab) then MsgN("Babylon 5 part found !") else MsgN("Babylon 5 part NOT found") end
+		
+		if(SFP.CL) then MsgN("Code Lyoko part found !") else MsgN("Code Lyoko part NOT found") end
 		
 		if(SFP.Bab) then MsgN("KSP part found !") else MsgN("KSP part NOT found") end
 	
@@ -163,7 +167,7 @@ function DrawErrors()
 	
 	if(SFP.Workshop)then
 	
-		if(!SFP.BSG or !SFP.Bab or !SFP.KSP or !SFP.Halo or !SFP.ME or !SFP.SC or !SFP.SG or !SFP.SW or !SFP.Other)then
+		if(!SFP.BSG or !SFP.Bab or !SFP.CL or !SFP.KSP or !SFP.Halo or !SFP.ME or !SFP.SC or !SFP.SG or !SFP.SW or !SFP.Other) then
 	
 			local frame = vgui.Create("DFrame");
 				frame:SetPos(ScrW()-540, 300);
