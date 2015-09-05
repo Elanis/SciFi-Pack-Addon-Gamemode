@@ -1,0 +1,8 @@
+VertexLitGeneric
+{
+	"$basetexture"	"models/l07/barque/rope_20"
+	//"$bumpmap"
+	"$surfaceprop" "wood"
+
+	"%keywords" "sgtc2"
+}

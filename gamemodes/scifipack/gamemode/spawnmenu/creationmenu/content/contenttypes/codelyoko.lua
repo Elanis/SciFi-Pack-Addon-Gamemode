@@ -5,7 +5,7 @@ CL.Spawnlist = {};
 CL.Spawnlist.Props = {
 "models/lyoko/evo_tower.mdl",
 "models/lyoko/skid.mdl",
-"models/CL/supercalculateur_mk2.mdl"
+"models/lyoko/supercalculateur_mk2.mdl"
 }
 
 hook.Add( "CLTab", "AddCLProps", function( pnlContent, tree, node )

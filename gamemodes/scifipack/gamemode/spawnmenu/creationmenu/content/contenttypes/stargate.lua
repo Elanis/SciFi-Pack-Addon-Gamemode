@@ -3,7 +3,17 @@ Stargate = {};
 Stargate.Spawnlist = {};
 
 Stargate.Spawnlist.Props = {
-"models/dglider.mdl"
+"models/circuitdest.mdl",
+"models/destbar.mdl",
+"models/hubdest.mdl",
+"models/com_chair/bc_303_chair.mdl",
+"models/l07/obel_brk_01.mdl",
+"models/l07/obel_brk_02.mdl",
+"models/l07/obelisque_01.mdl",
+"models/l07/sphinx.mdl",
+"models/l28/sgc_sign.mdl",
+"models/player/SG_sg1ur.mdl",
+"models/vaisseaux/deathglider.mdl"
 }
 
 local function AddToTab(Categorised, pnlContent, tree, node)

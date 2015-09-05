@@ -1,0 +1,5 @@
+"VertexLitGeneric" 
+{
+	"$basetexture" "models/l07/barque/dockwood" 
+	"$surfaceprop" "rock"
+}

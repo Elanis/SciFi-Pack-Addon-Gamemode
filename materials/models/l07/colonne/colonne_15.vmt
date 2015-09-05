@@ -1,0 +1,9 @@
+"VertexLitGeneric" 
+{
+	"$basetexture" "models/l07/colonne/colonne_15" 
+	"$bumpmap" "models/l07/colonne/colonne_15_normal"
+	"$envmap" "env_cubemap"
+	"$normalmapalphaenvmapmask" 1
+	"$envmaptint" "[0.07 0.07 0.07]"
+	"$surfaceprop" "rock"
+}
