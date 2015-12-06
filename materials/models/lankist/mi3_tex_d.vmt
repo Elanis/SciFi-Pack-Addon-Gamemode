@@ -1,0 +1,5 @@
+"VertexLitGeneric"
+{
+"$baseTexture" "models/lankist/mi3_tex_d"
+"$surfaceprop" "metal"
+}

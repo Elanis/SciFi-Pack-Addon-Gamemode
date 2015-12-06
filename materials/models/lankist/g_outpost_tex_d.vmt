@@ -1,0 +1,5 @@
+"VertexLitGeneric"
+{
+"$baseTexture" "models/lankist/g_outpost_tex_d"
+"$surfaceprop" "metal"
+}

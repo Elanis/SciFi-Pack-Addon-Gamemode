@@ -1,0 +1,5 @@
+"VertexLitGeneric"
+{
+"$baseTexture" "models/lankist/cfr_tex_d"
+"$surfaceprop" "metal"
+}

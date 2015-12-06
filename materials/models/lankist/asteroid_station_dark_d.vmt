@@ -1,0 +1,5 @@
+"VertexLitGeneric"
+{
+"$baseTexture" "models/lankist/asteroid_station_dark_d"
+"$surfaceprop" "metal"
+}

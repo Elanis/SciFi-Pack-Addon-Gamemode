@@ -61,27 +61,7 @@ MsgN("Searching Addons ...");
 
 for _, addon in SortedPairsByMemberValue( engine.GetAddons(), "title" ) do
 	
-	if (addon.title=="SciFi-Pack Addon/Gamemode Lua Part") then SFP.Workshop = true else SFP.Workshop = false end
-	
-	if(addon.title=="SciFi-Pack Addon/Gamemode BSG Part") then SFP.BSG = true else SFP.BSG = false end
-	
-	if(addon.title=="SciFi-Pack Addon/Gamemode Babylon 5 Part") then SFP.Bab = true else SFP.Bab = false end
-	
-	if(addon.title=="SciFi-Pack Addon/Gamemode Code Lyoko Part") then SFP.CL = true else SFP.CL= false end
-	
-	if(addon.title=="SciFi-Pack Addon/Gamemode KSP Part") then SFP.KSP = true else SFP.KSP = false end
-			
-	if(addon.title=="SciFi-Pack Addon/Gamemode Halo Part") then SFP.Halo = true else SFP.Halo = false end
-			
-	if(addon.title=="SciFi-Pack Addon/Gamemode Mass Effect Part") then SFP.Me = true else SFP.Me = false end
-			
-	if(addon.title=="SciFi-Pack Addon/Gamemode StarCraft Part") then SFP.SC = true else SFP.SC = false end
-			
-	if(addon.title=="SciFi-Pack Addon/Gamemode Stargate Part") then SFP.SG = true else SFP.SG = false end
-			
-	if(addon.title=="SciFi-Pack Addon/Gamemode Star Wars Part") then SFP.SW = true else SFP.SW = false end
-			
-	if(addon.title=="SciFi-Pack Addon/Gamemode Other Part") then SFP.Other = true else SFP.Other = false end
+	if (addon.title=="SciFi-Pack Addon/Gamemode Main Part - Maps / Lua") then SFP.Workshop = true else SFP.Workshop = false end
 	
 	end
 
@@ -89,25 +69,11 @@ for _, addon in SortedPairsByMemberValue( engine.GetAddons(), "title" ) do
 	
 		MsgN("Workshop Version Launch !")
 	
-		if(SFP.BSG) then MsgN("BSG part found !") else MsgN("BSG part NOT found") end
+		if(SFP.Models) then MsgN("Models part found !") else MsgN("Models part NOT found") end
 		
-		if(SFP.Bab) then MsgN("Babylon 5 part found !") else MsgN("Babylon 5 part NOT found") end
+		if(SFP.Materials) then MsgN("Materials part found !") else MsgN("Materials part NOT found") end
 		
-		if(SFP.CL) then MsgN("Code Lyoko part found !") else MsgN("Code Lyoko part NOT found") end
-		
-		if(SFP.Bab) then MsgN("KSP part found !") else MsgN("KSP part NOT found") end
-	
-		if(SFP.Halo) then MsgN("Halo part found !") else MsgN("Halo part NOT found") end
-	
-		if(SFP.Me) then MsgN("Mass Effect part found !") else MsgN("Mass Effect part NOT found") end
-	
-		if(SFP.SC) then MsgN("StarCraft part found !") else MsgN("StarCraft part NOT found") end
-	
-		if(SFP.SG) then MsgN("Stargate part found !") else MsgN("Stargate part NOT found") end
-	
-		if(SFP.SW) then MsgN("Star Wars part found !") else MsgN("Star Wars part NOT found") end
-	
-		if(SFP.Other) then MsgN("Other part found !") else MsgN("Other part NOT found") end
+		if(SFP.Sounds) then MsgN("Sounds part found !") else MsgN("Sounds part NOT found") end
 	
 	else
 	
@@ -167,7 +133,7 @@ function DrawErrors()
 	
 	if(SFP.Workshop)then
 	
-		if(!SFP.BSG or !SFP.Bab or !SFP.CL or !SFP.KSP or !SFP.Halo or !SFP.ME or !SFP.SC or !SFP.SG or !SFP.SW or !SFP.Other) then
+		if(!SFP.Models or !SFP.Materials or !SFP.Sounds) then
 	
 			local frame = vgui.Create("DFrame");
 				frame:SetPos(ScrW()-540, 300);

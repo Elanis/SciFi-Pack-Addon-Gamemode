@@ -1,0 +1,6 @@
+{
+"title" : "Test SciFipack",
+"type" : "gamemode",
+"tags" : ["fun","movie"],
+"ignore" : ["*.psd", "*.vcproj", "*.svn*" ".git/*"]
+}
