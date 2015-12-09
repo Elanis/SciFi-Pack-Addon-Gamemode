@@ -1,0 +1,7 @@
+"UnLitGeneric"
+{
+"$basetexture" "models/banshee/Standard_5"
+ "$selfillum" 1
+ "$surfaceprop" "metal"
+ "$nodecal" "1"
+}
