@@ -1,8 +1,8 @@
 --SciFi-Pack Initializing System
 --Made by Elanis
 
-SFP = { } --Init Global Var !
-SFP.WebVar = "https://raw.githubusercontent.com/Elanis/SciFi-Pack-Addon-Gamemode/master/lua/revision.lua"
+SFP = SFP or {}; --Init Global Var !
+SFP.WebVar = "https://raw.githubusercontent.com/Elanis/SciFi-Pack-Addon-Gamemode/master/lua/scifipack_revision.lua"
 SFP.LastRev = 0; --Default
 
 
@@ -12,8 +12,8 @@ end
 
 function GetRevision()
 
-	if (file.Exists("lua/revision.lua","GAME")) then
-			SFP.Revision = tonumber(file.Read("lua/revision.lua","GAME"));
+	if (file.Exists("lua/scifipack_revision.lua","GAME")) then
+			SFP.Revision = tonumber(file.Read("lua/scifipack_revision.lua","GAME"));
 	else
 			SFP.Revision = 0 -- For no Lua Errors
 	end
