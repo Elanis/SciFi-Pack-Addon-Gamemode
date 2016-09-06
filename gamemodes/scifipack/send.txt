@@ -22,7 +22,6 @@ gamemodes\scifipack\gamemode\spawnmenu\contextmenu.lua
 gamemodes\scifipack\gamemode\shared.lua
 gamemodes\scifipack\gamemode\spawnmenu\creationmenu.lua
 gamemodes\scifipack\gamemode\spawnmenu\spawnmenu.lua
-gamemodes\scifipack\gamemode\player_class\player_scifipack.lua
 gamemodes\scifipack\gamemode\spawnmenu\toolmenu.lua
 gamemodes\scifipack\gamemode\spawnmenu\controls\manifest.lua
 gamemodes\scifipack\gamemode\spawnmenu\toolpanel.lua
@@ -34,15 +33,14 @@ gamemodes\scifipack\gamemode\spawnmenu\controls\ropematerial.lua
 gamemodes\scifipack\gamemode\spawnmenu\controlpanel.lua
 gamemodes\scifipack\gamemode\spawnmenu\creationmenu\content\contentcontainer.lua
 gamemodes\scifipack\gamemode\spawnmenu\creationmenu\content\contentheader.lua
-gamemodes\scifipack\gamemode\spawnmenu\creationmenu\content\contentsearch.lua
 gamemodes\scifipack\gamemode\spawnmenu\creationmenu\content\contenticon.lua
+gamemodes\scifipack\gamemode\spawnmenu\creationmenu\content\contentsearch.lua
 gamemodes\scifipack\gamemode\spawnmenu\creationmenu\content\contentsidebar.lua
 gamemodes\scifipack\gamemode\spawnmenu\creationmenu\content\contentsidebartoolbox.lua
 gamemodes\scifipack\gamemode\spawnmenu\creationmenu\content\postprocessicon.lua
 gamemodes\scifipack\gamemode\spawnmenu\creationmenu\content\contenttypes\build.lua
 gamemodes\scifipack\gamemode\spawnmenu\creationmenu\content\contenttypes\babylon.lua
 gamemodes\scifipack\gamemode\spawnmenu\creationmenu\content\contenttypes\bsg.lua
-gamemodes\scifipack\gamemode\spawnmenu\creationmenu\content\contenttypes\codelyoko.lua
 gamemodes\scifipack\gamemode\spawnmenu\creationmenu\content\contenttypes\halo.lua
 gamemodes\scifipack\gamemode\spawnmenu\creationmenu\content\contenttypes\ksp.lua
 gamemodes\scifipack\gamemode\spawnmenu\creationmenu\content\contenttypes\masseffect.lua
@@ -74,7 +72,6 @@ gamemodes\scifipack\entities\weapons\gmod_tool\stools\physprop.lua
 gamemodes\scifipack\entities\weapons\gmod_tool\stools\remover.lua
 gamemodes\scifipack\entities\weapons\gmod_tool\stools\weld.lua
 gamemodes\scifipack\entities\entities\base_edit.lua
-gamemodes\scifipack\entities\entities\base_gmodentity.lua
 gamemodes\scifipack\entities\entities\edit_fog.lua
 gamemodes\scifipack\entities\entities\edit_sky.lua
 gamemodes\scifipack\entities\entities\edit_sun.lua

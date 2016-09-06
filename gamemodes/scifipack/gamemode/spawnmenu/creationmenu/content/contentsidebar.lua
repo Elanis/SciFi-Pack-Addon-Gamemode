@@ -1,3 +1,8 @@
+include( "ContentSidebarToolbox.lua" )
+
+local pnlSearch = vgui.RegisterFile( "ContentSearch.lua" )
+
+
 local PANEL = {}
 
 function PANEL:Init()
@@ -14,6 +19,7 @@ end
 
 function PANEL:EnableModify()
 
+	self.Search = vgui.CreateFromTable( pnlSearch, self )
 	self:CreateSaveNotification()
 
 	self.Toolbox = vgui.Create( "ContentSidebarToolbox", self )

@@ -1,7 +1,0 @@
-"UnLitGeneric"
-{
- "$basetexture" "models/lyoko/material_74"
- "$selfillum" 1
- "$surfaceprop" "metal"
- "$nodecal" "1"
-}

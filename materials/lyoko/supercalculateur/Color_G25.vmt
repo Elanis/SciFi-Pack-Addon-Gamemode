@@ -1,7 +1,0 @@
-"UnLitGeneric"
-{
-"$basetexture" "lyoko/supercalculateur/Color_G25"
- "$selfillum" 1
- "$surfaceprop" "metal"
- "$nodecal" "1"
-}
