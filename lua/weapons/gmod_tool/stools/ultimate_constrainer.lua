@@ -1,3 +1,4 @@
+TOOL.Tab="BSO";
 TOOL.Category = 'Constraints';
 TOOL.Name = 'Ultimate Constrainer';
 
@@ -131,8 +132,6 @@ function TOOL:RightClick( trace )
 				phys:SetMass( 0.1 )
 				duplicator.StoreEntityModifier( prop, "mass", { Mass = 0.1 } )
 				
-				prop:SetCollisionGroup(COLLISION_GROUP_NONE)
-				
 				-- Unfreeze and sleep the physobj
 				phys:EnableMotion( true )
 				phys:Sleep()
@@ -176,6 +175,9 @@ function TOOL:RightClick( trace )
 					
 					if data.Mass then
 						phys:SetMass( data.Mass )
+					end
+					if data.ColGroup then
+						prop:SetCollisionGroup( data.ColGroup )
 					end
 					if data.DisabledShadow then
 						prop:DrawShadow( true )

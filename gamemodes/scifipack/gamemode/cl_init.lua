@@ -2,7 +2,6 @@ include( "shared.lua" )
 include( 'cl_spawnmenu.lua' )
 include( 'cl_notice.lua' )
 include( "cl_hints.lua" )
-include( 'cl_worldtips.lua' )
 
 --
 -- Make BaseClass available

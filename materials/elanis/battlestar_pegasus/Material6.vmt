@@ -1,0 +1,7 @@
+"UnLitGeneric"
+{
+"$basetexture" "elanis/battlestar_pegasus/Material6"
+ "$selfillum" 1
+ "$surfaceprop" "metal"
+ "$nodecal" "1"
+}

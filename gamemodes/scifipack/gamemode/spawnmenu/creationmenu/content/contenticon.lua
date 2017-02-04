@@ -29,9 +29,8 @@ function PANEL:Init()
 
 	self.Label = self:Add( "DLabel" )
 	self.Label:Dock( BOTTOM )
-	self.Label:SetTall( 18 )
-	self.Label:SetContentAlignment( 5 )
-	self.Label:DockMargin( 4, 0, 4, 6 )
+	self.Label:SetContentAlignment( 2 )
+	self.Label:DockMargin( 4, 0, 4, 10 )
 	self.Label:SetTextColor( Color( 255, 255, 255, 255 ) )
 	self.Label:SetExpensiveShadow( 1, Color( 0, 0, 0, 200 ) )
 
@@ -118,7 +117,7 @@ function PANEL:Paint( w, h )
 
 	surface.SetDrawColor( 255, 255, 255, 255 )
 	
-	if ( !dragndrop.IsDragging() && (self:IsHovered() || self:IsChildHovered()) ) then
+	if ( !dragndrop.IsDragging() && (self:IsHovered() || self:IsChildHovered( 2 )) ) then
 
 		surface.SetMaterial( matOverlay_Hovered )
 		self.Label:Hide()

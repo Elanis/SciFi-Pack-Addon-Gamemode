@@ -18,7 +18,6 @@ Infos in LICENSE file , Do not copy without author permission.
 - Kilowing ( http://steamcommunity.com/id/Kilowing ) for making some of gamemode background
 - Williamdefly ( http://steamcommunity.com/profiles/76561198049406758 ) for creating the official map of the addon : sb_origins
 - Lankist ( lankists_email@yahoo.com ) for EVE Online Models ( Ships and Drones )
-- Katase ( https://3dwarehouse.sketchup.com/user.html?id=1058361951245355501624136 ) for some models 
 - and many authors unknowns ...
 
 #Studios Credits

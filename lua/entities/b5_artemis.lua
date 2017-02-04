@@ -1,5 +1,5 @@
 --[[
-	SciFi-Pack Artemis Ship
+	SciFi-Pack Ship Base
 	Copyright 2014-2016 - Made by Elanis
 
 	This script is based on scripts by RononDex / CatDeamon / LightDemon/ Votekick

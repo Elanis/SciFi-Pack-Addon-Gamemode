@@ -3,9 +3,6 @@ Stargate = {};
 Stargate.Spawnlist = {};
 
 Stargate.Spawnlist.Props = {
-"models/circuitdest.mdl",
-"models/destbar.mdl",
-"models/hubdest.mdl",
 "models/com_chair/bc_303_chair.mdl",
 "models/l07/obel_brk_01.mdl",
 "models/l07/obel_brk_02.mdl",
