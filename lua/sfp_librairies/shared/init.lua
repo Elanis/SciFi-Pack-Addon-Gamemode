@@ -123,10 +123,15 @@ function SFP.Init()
 		"SciFi-Pack Addon/Gamemode - Maps / Lua",
 		"SciFi-Pack Addon/Gamemode - Models", 
 		"SciFi-Pack Addon/Gamemode - Sounds"}
-	local materialsCount = 2;
+	local materialsCount = 5;
+	local modelsCount = 2;
 	local errors = 0;
 	SFP.MissingAddons = {};
 	SFP.AddonsInstalled = {};
+
+	for i=1,modelsCount do 
+		table.insert( addons, "SciFi-Pack Addon/Gamemode - Models "..i )
+	end
 
 	for i=1,materialsCount do 
 		table.insert( addons, "SciFi-Pack Addon/Gamemode - Materials "..i )
