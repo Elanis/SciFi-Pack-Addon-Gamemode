@@ -121,7 +121,6 @@ function SFP.Init()
 
 	addons = { 
 		"SciFi-Pack Addon/Gamemode - Maps / Lua",
-		"SciFi-Pack Addon/Gamemode - Models", 
 		"SciFi-Pack Addon/Gamemode - Sounds"}
 	local materialsCount = 5;
 	local modelsCount = 2;
@@ -166,15 +165,19 @@ function SFP.Init()
 	if(errors>0 && CLIENT) then
 		MsgN("ERRORS : "..errors);
 
-		hook.Add("SpawnMenuOpen","EAP.ErrorPanel",function()
+		hook.Add("SpawnMenuOpen","SFP.ErrorPanel",function()
 			MsgN("InitalSpawn");
-			EAP.DrawErrors()
-			hook.Remove("SpawnMenuOpen","EAP.ErrorPanel")
+			SFP.DrawErrors()
+			hook.Remove("SpawnMenuOpen","SFP.ErrorPanel")
 		end);
 		
 	end
 
 	MsgN("Loading Librairies ...")
+
+	if(SERVER) then
+		Lib.Monit.Start("EAP", EAP.Revision);
+	end
 end
 
 ----------------------------------------Launch !!!!!!!!!!!-------------------------------------------------------

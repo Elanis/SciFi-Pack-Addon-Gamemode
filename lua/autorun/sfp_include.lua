@@ -5,6 +5,11 @@ SFP.SpawnList = {};
 
 -- We're including all librairies ! @Elanis
 
+-- Monitoring (needed before init)
+if(SERVER)then
+	include('sfp_librairies/server/monitoring.lua');
+end
+
 --Initializing System
 IncludeCS('sfp_librairies/shared/init.lua');
 
