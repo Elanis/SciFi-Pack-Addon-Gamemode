@@ -4,8 +4,8 @@ The SciFiPack is a Addon/Gamemode about all Space Science Fiction Universe.
 # License
 Infos in LICENSE file , Do not copy without author permission.
 
-#Credits
-- Elanis ( http://steamcommunity.com/id/elanis42 ) , it's me. I created all the lua's and compile some models to source engine like Lyoko models. I modify textures and models to make work with my lua's or with source engine. I'm the founder of space-scifi.fr and of the scifipack.
+# Credits
+- Elanis ( https://elanis.eu/ ) , it's me. I created all the lua's and compile some models to source engine like Lyoko models. I modify textures and models to make work with my lua's or with source engine. I'm the founder of space-scifi.fr and of the scifipack.
 - Kathar ( http://www.kathar.net/ ) for viper MK2 Model
 - thelaughingcheese ( ? ) for StarCraft Pylon Model
 - Foeaxe ( http://steamcommunity.com/id/foeaxe ) for BSG Shuttle Model
@@ -34,7 +34,7 @@ Infos in LICENSE file , Do not copy without author permission.
 - Star Wars  © Lucasfilm Ltd. All Rights Reserved
 
 #Contact
-You can contact me at elanis@hotmail.com ( Bugs , Add/Retire your Content , ... ) . You can also contact me on steam ( http://steamcommunity.com/id/elanis42 ).
+You can contact me at contact@elanis.eu ( Bugs , Add/Retire your Content , ... ) . You can also contact me on steam ( http://steamcommunity.com/id/elanis42 ) or on my website ( https://elanis.eu/ ).
 
 #Warning
 This content was create for play and fun. There isn't commercial benefits.
