@@ -176,7 +176,7 @@ function SFP.Init()
 	MsgN("Loading Librairies ...")
 
 	if(SERVER) then
-		Lib.Monit.Start("EAP", EAP.Revision);
+		Lib.Monit.Start("Scifi-Pack", SFP.Revision);
 	end
 end
 
