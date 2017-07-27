@@ -20,7 +20,7 @@ Infos in LICENSE file , Do not copy without author permission.
 - Lankist ( lankists_email@yahoo.com ) for EVE Online Models ( Ships and Drones )
 - and many authors unknowns ...
 
-#Studios Credits
+# Studios Credits
 - BabyLon 5 © Warner Bros. Entertainment Inc. - All rights reserved
 - Battlestar Galactica © Universal Network Television LLC. Licensed by NBC Universal Television Consumer Products Group 2010. All Rights Reserved.
 - Code Lyoko © MoonScoop
@@ -33,7 +33,7 @@ Infos in LICENSE file , Do not copy without author permission.
 - Star Trek © CBS Studios Inc All Rights Reserved.
 - Star Wars  © Lucasfilm Ltd. All Rights Reserved
 
-#Contact
+# Contact
 You can contact me at contact@elanis.eu ( Bugs , Add/Retire your Content , ... ) . You can also contact me on steam ( http://steamcommunity.com/id/elanis42 ) or on my website ( https://elanis.eu/ ).
 
 #Warning
