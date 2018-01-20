@@ -1,6 +1,8 @@
 # SciFipack
 The SciFiPack is a Addon/Gamemode about all Space Science Fiction Universe. 
 
+**Warning: The updates of this addon are increasingly rare, it's possible there'll be never updated in future.**
+
 # License
 Infos in LICENSE file , Do not copy without author permission.
 
