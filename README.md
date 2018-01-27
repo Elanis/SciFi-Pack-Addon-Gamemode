@@ -11,7 +11,7 @@ License: https://github.com/Elanis/SciFi-Pack-Addon-Gamemode/blob/master/LICENSE
 Infos in LICENSE file, do not copy without author permission.
 
 # Credits
-- Elanis ( https://elanis.eu/ ) , it's me. I created all the lua's and compile some models to source engine like Lyoko models. I modify textures and models to make work with my lua's or with source engine. I'm the founder of space-scifi.fr and of the scifipack.
+- Elanis ( https://elanis.eu/ ): I created all the lua's and compile some models to source engine like Lyoko models. I modify textures and models to make work with my lua or with source engine. I'm the founder of the Scifi-Pack.
 - Kathar ( http://www.kathar.net/ ) for viper MK2 Model
 - thelaughingcheese ( ? ) for StarCraft Pylon Model
 - Foeaxe ( http://steamcommunity.com/id/foeaxe ) for BSG Shuttle Model
