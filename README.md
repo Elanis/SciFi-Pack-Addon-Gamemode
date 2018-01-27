@@ -3,7 +3,7 @@ The Scifi-Pack is an addon pack made to work as an addon and as a gamemode depen
 
 # Some usefull links
 Official Website: https://scifi.elanis.eu/  
-Github : https://github.com/Elanis/SciFi-Pack-Addon-Gamemode/  
+Workshop Collection: http://steamcommunity.com/sharedfiles/filedetails/?id=459240346  
 Credits : https://github.com/Elanis/SciFi-Pack-Addon-Gamemode/blob/master/README.md  
 License: https://github.com/Elanis/SciFi-Pack-Addon-Gamemode/blob/master/LICENSE  
 
