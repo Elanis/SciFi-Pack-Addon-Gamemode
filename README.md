@@ -2,10 +2,10 @@
 The Scifi-Pack is an addon pack made to work as an addon and as a gamemode depending on player choice. It's a pack about many Science Fiction shows, movies, games, etc
 
 # Some usefull links
-Official Website: https://scifi.elanis.eu/
-Github : https://github.com/Elanis/SciFi-Pack-Addon-Gamemode/
-Credits : https://github.com/Elanis/SciFi-Pack-Addon-Gamemode/blob/master/README.md
-License: https://github.com/Elanis/SciFi-Pack-Addon-Gamemode/blob/master/LICENSE
+Official Website: https://scifi.elanis.eu/  
+Github : https://github.com/Elanis/SciFi-Pack-Addon-Gamemode/  
+Credits : https://github.com/Elanis/SciFi-Pack-Addon-Gamemode/blob/master/README.md  
+License: https://github.com/Elanis/SciFi-Pack-Addon-Gamemode/blob/master/LICENSE  
 
 # License
 Infos in LICENSE file, do not copy without author permission.
