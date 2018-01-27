@@ -1,10 +1,14 @@
-# SciFipack
-The SciFiPack is a Addon/Gamemode about all Space Science Fiction Universe. 
+# The Scifi-Pack ? What is this ?
+The Scifi-Pack is an addon pack made to work as an addon and as a gamemode depending on player choice. It's a pack about many Science Fiction shows, movies, games, etc
 
-**Warning: The updates of this addon are increasingly rare, it's possible there'll be never updated in future.**
+# Some usefull links
+Official Website: https://scifi.elanis.eu/
+Github : https://github.com/Elanis/SciFi-Pack-Addon-Gamemode/
+Credits : https://github.com/Elanis/SciFi-Pack-Addon-Gamemode/blob/master/README.md
+License: https://github.com/Elanis/SciFi-Pack-Addon-Gamemode/blob/master/LICENSE
 
 # License
-Infos in LICENSE file , Do not copy without author permission.
+Infos in LICENSE file, do not copy without author permission.
 
 # Credits
 - Elanis ( https://elanis.eu/ ) , it's me. I created all the lua's and compile some models to source engine like Lyoko models. I modify textures and models to make work with my lua's or with source engine. I'm the founder of space-scifi.fr and of the scifipack.
@@ -36,7 +40,7 @@ Infos in LICENSE file , Do not copy without author permission.
 - Star Wars  © Lucasfilm Ltd. All Rights Reserved
 
 # Contact
-You can contact me at contact@elanis.eu ( Bugs , Add/Retire your Content , ... ) . You can also contact me on steam ( http://steamcommunity.com/id/elanis42 ) or on my website ( https://elanis.eu/ ).
+You can contact me at contact@elanis.eu (Bugs, Add/Retire your Content, ...). You also can contact me on my website: https://elanis.eu/.
 
 # Warning
 This content was create for play and fun. There isn't commercial benefits.
