@@ -8,7 +8,7 @@ ENT.Instructions= ""
 ENT.Spawnable	= true
 ENT.AdminSpawnable = true
 
-list.Set("Sw.Ent", ENT.PrintName, ENT);
+list.Set("SW.Ent", ENT.PrintName, ENT);
 
 if(gmod.GetGamemode().Name=="SciFiPack") then 
 ENT.Category = "SpaceShips"

@@ -27,7 +27,7 @@ Infos in LICENSE file, do not copy without author permission.
 - and many authors unknowns ...
 
 # Studios Credits
-- BabyLon 5 © Warner Bros. Entertainment Inc. - All rights reserved
+- Babylon 5 © Warner Bros. Entertainment Inc. - All rights reserved
 - Battlestar Galactica © Universal Network Television LLC. Licensed by NBC Universal Television Consumer Products Group 2010. All Rights Reserved.
 - Code Lyoko © MoonScoop
 - EVE Online © CCP 1997-Now

@@ -2,7 +2,7 @@
 	SciFi-Pack Ship Base
 	Copyright 2014-2016 - Made by Elanis
 
-	This script is based on scripts by RononDex / CatDeamon / LightDemon/ Votekick
+	This script is based on scripts by RononDex/CatDeamon/LightDemon/Votekick
 	Thanks to them to helping me making my system.
 
 	This program is free software: you can redistribute it and/or modify
@@ -22,18 +22,21 @@
 ENT.Type = "vehicle"
 ENT.Base = "base_anim"
 ENT.PrintName	= "Ship Base"
-ENT.Author	= "Elanis"
-ENT.Contact	= "elanis@hotmail.com"
+ENT.Author	= "RononDex, CatDeamon, LightDemon, Votekick, Elanis"
+ENT.Contact	= "elanis.eu"
 ENT.Spawnable	= false
 ENT.AdminSpawnable = false
 
-if (SERVER) then
+if SERVER then
+	AddCSLuaFile();
 
 	function ENT:Initialize()
 
 		self.Pilot = nil
 		self.Piloting = false
 		self.WeaponsTable = {}
+
+		self.SoundsOn["Engine"] = nil
 
 		self.Entity:SetModel(self.Model)
 		self.Entity:PhysicsInit( SOLID_VPHYSICS )
@@ -157,8 +160,7 @@ if (SERVER) then
 
 end
 
-if(CLIENT) then
-
+if CLIENT then
 	function ENT:Initialize()
 		if (self.Sounds and self.Sounds.Engine!="") then
 			self.EngineSound = self.EngineSound or CreateSound(self.Entity,self.Sounds.Engine);
